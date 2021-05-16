@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+            {{#with labels}}
+            <td>Name</td>
+            <td {{state}}>State</td>
+            <td {{type}}>Type</td>
+            <td {{total_intl_UG}}>Total International Students</td>
+            <td {{fin_aid}}>Financial Aid type</td>
+            <td {{aid_intl_UG}}>International students receiving aid</td>
+            <td {{avg_aid}}>Average Financial Aid</td>
+            <td {{tuition}}>Tuition</td>
+            {{/with}}
+            </tr>
+        </thead>
+        
+        <tbody>
+            {{#each colleges}}
+                <tr>
+                    <td>{{name}}</td>
+
+                    {{#if state}}
+                    <td>{{state}}</td>
+                    {{/if}}
+
+                    {{#if type}}
+                    <td>{{type}}</td>
+                    {{/if}}
+
+                    {{#if total_intl_UG}}
+                    <td>{{total_intl_UG}}</td>
+                    {{/if}}
+
+                    {{#if fin_aid}}
+                    <td>{{fin_aid}}</td>
+                    {{/if}}
+
+                    {{#if aid_intl_UG}}
+                    <td>{{aid_intl_UG}}</td>
+                    {{/if}}
+
+                    {{#if avg_aid}}
+                    <td>${{avg_aid}}</td>
+                    {{/if}}
+
+                    {{#if tuition}}
+                    <td>${{tuition}}</td>
+                    {{/if}}
+
+
+                    <td>2018-19</td>
+                </tr>
+            {{/each}}
+        </tbody>
+        
+    </table>
+</div>
+
+
+
+
